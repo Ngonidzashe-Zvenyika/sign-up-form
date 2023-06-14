@@ -10,48 +10,48 @@
 </head>
 
 <body>
-    <form action="">
-        <img src="" alt="">
-        <h1></h1>
+    <form action="" method="post">
+        <img src="./svg.svg" alt="logo">
+        <h2>Sign Up</h2>
         <fieldset class="form-row">
             <div>
-                <label for=""></label>
-                <input type="text">
-                <span></span>
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" id="first-name" name="first-name" placeholder="FIRST NAME">
+                <span>Example: John</span>
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
-                <span></span>
+                <label for="last-name">LAST NAME</label>
+                <input type="text" id="last-name" name="last-name" placeholder="LAST NAME">
+                <span>Example: Doe</span>
             </div>
         </fieldset>
         <fieldset class="form-row">
             <div>
-                <label for=""></label>
-                <input type="text">
-                <span></span>
+                <label for="email">E-MAIL</label>
+                <input type="email" id="email" name="email" placeholder="E-MAIL" autocomplete="email">
+                <span>Example: yourname@gmail.com</span>
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
-                <span></span>
+                <label for="phone-number">PHONE NUMBER</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="PHONE NUMBER" pattern="/\+{1}\d{1,15}/" title="Use international phone number format.">
+                <span>Example: +263749503293</span>
             </div>
         </fieldset>
         <fieldset class="form-row">
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="new-password">PASSWORD</label>
+                <input type="password" id="new-password" name="new-password" placeholder="PASSWORD" pattern="/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/" autocomplete="new-password">
                 <span></span>
             </div>            <div>
-                <label for=""></label>
-                <input type="text">
-                <span></span>
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="CONFIRM PASSWORD" autocomplete="new-password">
+                <span>Passwords do not match</span>
             </div>
         </fieldset>
         <fieldset class="form-row last-row">
-            <p></p>
-            <button class="form-row"></button>
-            <p class="form-row"><span></span></p>
+            <p>By signing up you are agreeing to our <em>Terms & Conditions</em> and <em>Privacy Policy</em></p>
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <em>Login</em></p>
         </fieldset>
     </form>
 </body>
