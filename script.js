@@ -5,7 +5,7 @@ const confirmPassword = document.querySelector("#confirm-password");
 
 confirmPassword.addEventListener("input", () => {
         if (confirmPassword.value !== newPassword.value) {
-            confirmPassword.setCustomValidity("Invalid");
+            confirmPassword.setCustomValidity("Passwords do not match");
         } else if (confirmPassword.value === newPassword.value) {
             confirmPassword.setCustomValidity("");
         }
@@ -14,7 +14,7 @@ confirmPassword.addEventListener("input", () => {
 newPassword.addEventListener("input", () => {
     if (confirmPassword !== "") {
     if (confirmPassword.value !== newPassword.value) {
-        confirmPassword.setCustomValidity("Invalid");
+        confirmPassword.setCustomValidity("Passwords do not match");
     } else if (confirmPassword.value === newPassword.value) {
         confirmPassword.setCustomValidity("");
     }

@@ -151,11 +151,15 @@ button {
     padding: 1rem;
     border: 2px solid #295366;
     border-radius: .5rem;
-    box-shadow: inset 2px 2px 3px #E21F1B, inset -2px -2px 3px #E21F1B, 1px 1px 3px black;
+    box-shadow: inset 2px 2px 2px #E21F1B, inset -2px -2px 2px #E21F1B;
     margin: 1rem 0;
     background-color: #FFFFFF;
     cursor: pointer;
+}
 
+button:hover,
+button:focus {
+    box-shadow: inset 2px 2px 3px #E21F1B, inset -2px -2px 3px #E21F1B,          1px 1px 4      px black;
 }
 
 @media only screen and (max-width: 580px) {
