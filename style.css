@@ -6,5 +6,186 @@
 
 :root {
     font-size: 62.5%;
-    font-family: Arial, Helvetica, sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Arial, sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 100svh;
+    background-color: #295366;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: clamp(280px, 100%, 720px);
+    padding: 1rem;
+    border: 2px solid #295366;
+    border-radius: 1rem;
+    margin: 0 2rem;
+    background-color: #efefef;
+    box-shadow: 2px 2px 3px black, -2px -2px 3px black;
+
+}
+
+img {
+    height: min(288px, 40vh);
+    width: auto;
+}
+
+h2 {
+    color: #295366;
+    font-size: 3rem;
+    font-family: serif,  sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: .25rem;
+    text-align: center;
+    padding-bottom: .25rem;
+}
+
+fieldset {
+    border: none;
+    margin-top: 2rem;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 3rem;
+}
+
+fieldset div {
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: -0.75rem;
+    left: 1rem;
+    color: #295366;
+    padding: .2rem .2rem 0 .2rem;
+    border: 2px solid #295366;
+    visibility: hidden;
+}
+
+input {
+    border: none;
+    outline: none;
+    appearance: none;
+    width: min(220px + 5vw, 285px);
+    color: #295366;
+    padding: 1rem 1rem .25rem;
+    border-bottom: 2px solid #295366;
+    margin-bottom: 1rem;
+    background-color: #efefef;
+}
+
+::placeholder {
+    color: #B8CAD7;
+}
+
+span {
+    color: #295366;
+    position: absolute;
+    top: -1.75rem;
+    left: 1rem;
+    visibility: hidden;
+}
+
+input:focus {
+    border: 2px solid #295366;
+    border-radius: .25rem;
+}
+
+input:focus::placeholder {
+    visibility: hidden;
+}
+
+input:focus:invalid ~ label {
+    visibility: visible;
+    background-color: #e48685;
+}
+
+input:focus ~ span {
+    visibility: visible;
+}
+
+input:valid {
+    border: 2px solid #295366;
+    border-radius: .25rem;
+}
+
+input:valid ~ label {
+    visibility: visible;
+    background-color: #B8CAD7;
+}
+
+input:valid ~ span {
+    visibility: hidden;
+}
+
+.last-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+em {
+    color: #295366;
+    font-weight: 700;
+    text-decoration: underline 1px #295366;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+    appearance: none;
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    color: #295366;
+    padding: 1rem;
+    border: 2px solid #295366;
+    border-radius: .5rem;
+    box-shadow: inset 2px 2px 3px #E21F1B, inset -2px -2px 3px #E21F1B, 1px 1px 3px black;
+    margin: 1rem 0;
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width: 580px) {
+    form {
+        border-radius: 0;
+        margin: 0;
+        box-shadow: inset 3px 3px 4px black, inset -3px -3px 4px black;
+    }
+
+    img {
+        height: min(230px, 30vh);
+        width: auto;
+    }
+
+    fieldset {
+        margin-top: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
