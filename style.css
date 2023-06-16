@@ -5,6 +5,11 @@
 }
 
 :root {
+    --main-green: #295366;
+    --accent-color-red: #E21F1B;
+    --accent-color-pink: #e48685;
+    --accent-color-green: #B8CAD7;
+    --accent-color-off-white: #efefef;
     font-size: 62.5%;
     font-family: Arial, sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -13,37 +18,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    height: 100svh;
-    background-color: #295366;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-color: var(--main-green);
 }
 
 form {
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: clamp(280px, 100%, 720px);
+    width: clamp(300px, 100%, 1080px);
+    font-size: 1.6rem;
     padding: 1rem;
-    border: 2px solid #295366;
+    border: .2rem solid var(--main-green);
     border-radius: 1rem;
     margin: 0 2rem;
-    background-color: #efefef;
-    box-shadow: 2px 2px 3px black, -2px -2px 3px black;
+    background-color: var(--accent-color-off-white);
+    box-shadow: .2rem .2rem .3rem black, -0.2rem -0.2rem .3rem black;
 
 }
 
 img {
-    height: min(288px, 40vh);
+    height: min(230px, 30vh);
     width: auto;
 }
 
 h2 {
-    color: #295366;
-    font-size: 3rem;
+    color: var(--main-green);
+    font-size: 2em;
     font-family: serif,  sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     letter-spacing: .25rem;
     text-align: center;
-    padding-bottom: .25rem;
+    padding-bottom: .75rem;
 }
 
 fieldset {
@@ -54,20 +61,21 @@ fieldset {
 .form-row {
     display: flex;
     justify-content: space-evenly;
-    column-gap: 3rem;
+    column-gap: 2rem;
 }
 
 fieldset div {
     position: relative;
+    width: calc(100%/2.3);
 }
 
 label {
     position: absolute;
-    top: -0.75rem;
+    top: -1.25rem;
     left: 1rem;
-    color: #295366;
+    color: var(--main-green);
     padding: .2rem .2rem 0 .2rem;
-    border: 2px solid #295366;
+    border: .2rem solid var(--main-green);
     visibility: hidden;
 }
 
@@ -75,28 +83,29 @@ input {
     border: none;
     outline: none;
     appearance: none;
-    width: min(220px + 5vw, 285px);
-    color: #295366;
+    font-size: 1.1em;
+    width: 100%;
+    color: var(--main-green);
     padding: 1rem 1rem .25rem;
-    border-bottom: 2px solid #295366;
+    border-bottom: .2rem solid var(--main-green);
     margin-bottom: 1rem;
-    background-color: #efefef;
+    background-color: var(--accent-color-off-white);
 }
 
 ::placeholder {
-    color: #B8CAD7;
+    color: var(--accent-color-green);
 }
 
 span {
-    color: #295366;
+    color: var(--main-green);
     position: absolute;
-    top: -1.75rem;
+    top: -2.85rem;
     left: 1rem;
     visibility: hidden;
 }
 
 input:focus {
-    border: 2px solid #295366;
+    border: .2rem solid var(--main-green);
     border-radius: .25rem;
 }
 
@@ -106,21 +115,25 @@ input:focus::placeholder {
 
 input:focus:invalid ~ label {
     visibility: visible;
-    background-color: #e48685;
+    background-color: var(--accent-color-pink);
 }
 
 input:focus ~ span {
     visibility: visible;
 }
 
+input:focus ~ .password-warning {
+    visibility: hidden;
+}
+
 input:valid {
-    border: 2px solid #295366;
+    border: .2rem solid var(--main-green);
     border-radius: .25rem;
 }
 
 input:valid ~ label {
     visibility: visible;
-    background-color: #B8CAD7;
+    background-color: var(--accent-color-green);
 }
 
 input:valid ~ span {
@@ -134,9 +147,9 @@ input:valid ~ span {
 }
 
 em {
-    color: #295366;
+    color: var(--main-green);
     font-weight: 700;
-    text-decoration: underline 1px #295366;
+    text-decoration: underline .1rem var(--main-green);
     cursor: pointer;
 }
 
@@ -145,42 +158,38 @@ button {
     outline: none;
     appearance: none;
     width: 60%;
+    font-size: 1.15em;
     font-family: Arial, Helvetica, sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 700;
-    color: #295366;
-    padding: 1rem;
-    border: 2px solid #295366;
+    color: var(--main-green);
+    padding: 1rem .2rem;
+    border: .2rem solid var(--main-green);
     border-radius: .5rem;
-    box-shadow: inset 2px 2px 2px #E21F1B, inset -2px -2px 2px #E21F1B;
-    margin: 1rem 0;
-    background-color: #FFFFFF;
+    box-shadow: inset .2rem .2rem .2rem var(--accent-color-red), inset -0.2rem -0.2rem .2rem var(--accent-color-red);
+    margin: 1.5rem 0;
+    background-color: white;
     cursor: pointer;
 }
 
 button:hover,
 button:focus {
-    box-shadow: inset 2px 2px 3px #E21F1B, inset -2px -2px 3px #E21F1B,          1px 1px 4      px black;
+    box-shadow: inset .2rem .2rem .3rem var(--accent-color-red), inset -.2rem -.2rem .3rem var(--accent-color-red), .1rem .1rem .4rem black;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 700px) {
     form {
         border-radius: 0;
         margin: 0;
-        box-shadow: inset 3px 3px 4px black, inset -3px -3px 4px black;
-    }
-
-    img {
-        height: min(230px, 30vh);
-        width: auto;
-    }
-
-    fieldset {
-        margin-top: 1rem;
+        box-shadow: inset .3rem .3rem .4rem black, inset -.3rem -.3rem .4rem black;
     }
 
     .form-row {
         flex-direction: column;
-        row-gap: 1rem;
+        row-gap: 2rem;
+    }
+
+    fieldset div {
+        width: 100%;
     }
 
     input {
