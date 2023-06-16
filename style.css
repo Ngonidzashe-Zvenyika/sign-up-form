@@ -122,10 +122,6 @@ input:focus ~ span {
     visibility: visible;
 }
 
-input:focus ~ .password-warning {
-    visibility: hidden;
-}
-
 input:valid {
     border: .2rem solid var(--main-green);
     border-radius: .25rem;
