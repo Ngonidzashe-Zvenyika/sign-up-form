@@ -174,9 +174,9 @@ button:focus {
 
 @media only screen and (max-width: 700px) {
     form {
+        border: none;
         border-radius: 0;
         margin: 0;
-        box-shadow: inset .3rem .3rem .4rem black, inset -.3rem -.3rem .4rem black;
     }
 
     .form-row {
