@@ -144,7 +144,6 @@ input:valid ~ span {
 
 em {
     color: var(--main-green);
-    font-weight: 700;
     text-decoration: underline .1rem var(--main-green);
     cursor: pointer;
 }
@@ -154,7 +153,7 @@ button {
     outline: none;
     appearance: none;
     width: 60%;
-    font-size: 1.15em;
+    font-size: 1.1em;
     font-family: Arial, Helvetica, sans-serif, system-ui, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 700;
     color: var(--main-green);
@@ -177,6 +176,10 @@ button:focus {
         border: none;
         border-radius: 0;
         margin: 0;
+    }
+
+    img {
+        height: min(100px, 30vh);
     }
 
     .form-row {
